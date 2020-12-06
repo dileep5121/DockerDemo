@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<title>Hibernate-Assessment</title>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+
+
+
+<body>
+
+
+
+<form action="#" th:action="@{/Hibernatecheck}"  method="post"  th:object="${questions}">
+
+<div class="p-5">
+
+<h4 class="text-center p-4"><b><i>Hibernate-Assessment</i></b></h4>
+<hr>
+<br>
+
+
+<!-- Question-1 -->
+<label><b><i>Question 1:What is full form of ORM ?</i></b><br></label><br>
+
+
+<input type="radio" name="Question1"  value="Object Random Memory"  th:id="Q1-Opt1"  th:field="*{q1}">
+<label>Object Random Memory</label><br>
+
+
+<input type="radio" name="Question1" value="Object Relational Mismatch"  th:id="Q1-Opt2"  th:field="*{q1}"/>
+<label>Object Relational Mismatch</label>
+<br>
+
+<input type="radio" name="Question1" value="Object Relational Mapping" th:id="Q1-Opt3"  th:field="*{q1}">
+<label>Object Relational Mapping</label>
+<br>
+
+<input type="radio" name="Question1" value="Object Random Mapping" th:id="Q1-Opt4" th:field="*{q1}">
+<label>Object Random Mapping</label>
+
+
+<br><br>
+
+
+
+
+
+<!-- Question-2 -->
+
+
+<label><b><i>In Hibernate,based on directionality,what could be the mapping</i></b></label><br>
+
+<input type="radio" th:name="Question2"  value="uni-directional and bi-directional" th:id="Q2-opt1" th:field="*{q2}">
+<label>Uni-Directional and Bi-Directional</label>
+<br>
+
+
+<input type="radio" th:name="Question2" value="one-to-one and many-to-one" th:id="Q2-Opt2" th:field="*{q2}">
+<label>One-To-One and Many-To-One</label>
+<br>
+
+
+
+<input type="radio" th:name="Question2" value="inheritance mapping" th:id="Q2-Opt3" th:field="*{q2}">
+<label>Inheritance mapping</label>
+<br>
+
+
+<input type="radio" th:name="Question2" value="north and south mapping" th:id="Q2-Opt4" th:field="*{q2}">
+<label>North and South Mapping</label>
+<br><br>
+
+
+
+
+<!-- Question-3 -->
+
+<label><i><b>Question 3:In Hibernate application,which file would have datasource details</b></i></label><br>
+
+<input type="radio" th:name="Question3" value="hibernate mapping file"  th:id="Q3-Opt1"   th:field="*{q3}">
+<label>Hibernate mapping file</label>
+<br>
+
+
+
+<input type="radio" th:name="Question3" value="configuration file"  th:id="Q3-Opt2"   th:field="*{q3}">
+<label>Configuration file</label>
+<br>
+
+
+
+<input type="radio" th:name="Question3" value="Model/Entity class"  th:id="Q3-Opt3"   th:field="*{q3}">
+<label>Model Entity Class</label>
+<br>
+
+
+
+<input type="radio" th:name="Question3" value="HibernateUtil class"  th:id="Q3-Opt4"   th:field="*{q3}">
+<label>HibernateUtil class</label>
+<br><br>
+
+
+
+
+
+
+<!-- Question-4 -->
+
+<label><i><b>Question 4:What is full form of HQL</b></i></label><br>
+
+<input type="radio" th:name="Question4" value="High-Level Query Language"  th:id="Q4-Opt1"   th:field="*{q4}">
+<label>High-Level Query Language</label>
+<br>
+
+
+
+<input type="radio" th:name="Question4" value="Hidden Query Language"  th:id="Q4-Opt2"   th:field="*{q4}">
+<label>Hidden Query Language</label>
+<br>
+
+
+
+<input type="radio" th:name="Question4" value="Hibernate Query Language"  th:id="Q4-Opt3"   th:field="*{q4}">
+<label>Hibernate Query Language</label>
+<br>
+
+
+
+<input type="radio" th:name="Question4" value="Hibernate Quadratic Language"  th:id="Q4-Opt4"   th:field="*{q4}">
+<label>Hibernate Quadratic Language</label>
+<br><br>
+
+
+
+
+
+
+<!-- Question-5-->
+
+<label><i><b>Question 4:In a Hibernate application,concurrrency can be controlled by:</b></i></label><br>
+
+<input type="radio" th:name="Question5" value="concurrency-level"  th:id="Q5-Opt1"   th:field="*{q5}">
+<label></label>Concurrency-Level
+<br>
+
+
+
+<input type="radio" th:name="Question5" value="One-To-One-Mapping"  th:id="Q5-Opt2"   th:field="*{q5}">
+<label>One-To-One-Mapping</label>
+<br>
+
+
+
+<input type="radio" th:name="Question5" value="Many-to-one-birdictional-mapping"  th:id="Q5-Opt3"   th:field="*{q5}">
+<label>Many-to-one-birdictional-mapping</label>
+<br>
+
+
+
+<input type="radio" th:name="Question5" value="Isolation level"  th:id="Q5-Opt4"   th:field="*{q5}">
+<label>Isolation level</label>
+<br><br>
+
+
+
+
+
+
+<input type="submit" value="Submit-Test">
+
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+</body>

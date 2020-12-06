@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<title>Spring-Assessment</title>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+
+
+
+<body>
+
+
+
+<form action="#" th:action="@{/Springcheck}"  method="post"  th:object="${questions}">
+
+<div class="p-5">
+
+<h4 class="text-center p-4"><b><i>Spring-Assessment</i></b></h4>
+<hr>
+<br>
+
+
+<!-- Question-1 -->
+<label><b><i>Question 1:What is Spring?</i></b><br></label><br>
+
+
+<input type="radio" name="Question1"  value="J2EE App Server"  th:id="Q1-Opt1"  th:field="*{q1}">
+<label>J2EE App Server</label><br>
+
+
+<input type="radio" name="Question1" value="J2EE App Development Framework"  th:id="Q1-Opt2"  th:field="*{q1}"/>
+<label>J2EE App Development Framework</label>
+<br>
+
+<input type="radio" name="Question1" value="Configuration Managment Tool" th:id="Q1-Opt3"  th:field="*{q1}">
+<label>Configuration Management Tool</label>
+<br>
+
+<input type="radio" name="Question1" value="Build Tool" th:id="Q1-Opt4" th:field="*{q1}">
+<label>Build Tool</label>
+
+
+<br><br>
+
+
+
+
+
+<!-- Question-2 -->
+
+
+<label><b><i>Question 2:What is full form of IOC</i></b></label><br>
+
+<input type="radio" th:name="Question2"  value="Inversion Of Control" th:id="Q2-opt1" th:field="*{q2}">
+<label>Inversion Of Control</label>
+<br>
+
+
+<input type="radio" th:name="Question2" value="Interjection Of Control" th:id="Q2-Opt2" th:field="*{q2}">
+<label>Interjection of Control</label>
+<br>
+
+
+
+<input type="radio" th:name="Question2" value="Internal Object Control" th:id="Q2-Opt3" th:field="*{q2}">
+<label>Internal Object Control</label>
+<br>
+
+
+<input type="radio" th:name="Question2" value="In-built Object Control" th:id="Q2-Opt4" th:field="*{q2}">
+<label>In-built Object Control</label>
+<br><br>
+
+
+
+
+<!-- Question-3 -->
+
+<label><i><b>Question 3:What is full form of AOP</b></i></label><br>
+
+<input type="radio" th:name="Question3" value="Anticipation Of Properties"  th:id="Q3-Opt1"   th:field="*{q3}">
+<label>Anticipation Of Properties</label>
+<br>
+
+
+
+<input type="radio" th:name="Question3" value="Aspect Oriented Programming"  th:id="Q3-Opt2"   th:field="*{q3}">
+<label>Aspect Oriented Programming</label>
+<br>
+
+
+
+<input type="radio" th:name="Question3" value="Associated Object Programming"  th:id="Q3-Opt3"   th:field="*{q3}">
+<label>Associated Object Programming</label>
+<br>
+
+
+
+<input type="radio" th:name="Question3" value="Anti Object Programming"  th:id="Q3-Opt4"   th:field="*{q3}">
+<label>Anti Object Programming</label>
+<br><br>
+
+
+
+
+
+
+<!-- Question-4 -->
+
+<label><i><b>Question 4:Which of the below is Spring Container</b></i></label><br>
+
+<input type="radio" th:name="Question4" value="View Resolver"  th:id="Q4-Opt1"   th:field="*{q4}">
+<label>View  Resolver</label>
+<br>
+
+
+
+<input type="radio" th:name="Question4" value="Application Context"  th:id="Q4-Opt2"   th:field="*{q4}">
+<label>Application Context</label>
+<br>
+
+
+
+<input type="radio" th:name="Question4" value="Handler Mapping"  th:id="Q4-Opt3"   th:field="*{q4}">
+<label>Handler Mapping</label>
+<br>
+
+
+
+<input type="radio" th:name="Question4" value="Dispatcher Servlet"  th:id="Q4-Opt4"   th:field="*{q4}">
+<label>Dispatcher Servlet</label>
+<br><br>
+
+
+
+
+
+
+<!-- Question-5-->
+
+<label><i><b>Question 4:Which is Spring front Controller Implementation</b></i></label><br>
+
+<input type="radio" th:name="Question5" value="Bean Factory"  th:id="Q5-Opt1"   th:field="*{q5}">
+<label>Bean Factory</label>
+<br>
+
+
+
+<input type="radio" th:name="Question5" value="Class Path Application Context"  th:id="Q5-Opt2"   th:field="*{q5}">
+<label>Class Path Application Context</label>
+<br>
+
+
+
+<input type="radio" th:name="Question5" value="Application Context"  th:id="Q5-Opt3"   th:field="*{q5}">
+<label>Application Context</label>
+<br>
+
+
+
+<input type="radio" th:name="Question5" value="Dispatcher Servlet"  th:id="Q5-Opt4"   th:field="*{q5}">
+<label>Dispatcher Servlet</label>
+<br><br>
+
+
+
+
+
+
+<input type="submit" value="Submit-Test">
+
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+</body>

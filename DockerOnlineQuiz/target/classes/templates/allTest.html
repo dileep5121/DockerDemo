@@ -1,0 +1,95 @@
+<html xmlns:th="https://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+<title>Admin-Page</title>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+
+<style>
+
+table{
+   margin: 0 auto
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="text-center p-4">
+
+<h4>List Of Candidates and Test</h4><br>
+<hr>
+
+<table border="2">
+
+<thead>
+
+<tr>
+
+<th class="text-center p-4"><b><i>Test-Date</i></b>
+<th class="text-center p-4"><b><i>Assessment</i></b>
+<th class="text-center p-4"><b><i>Test-Marks</i></b>
+<th class="text-center p-4"><b><i>E-mail Id</i></b>
+<th class="text-center p-4"><b><i>Total-Marks</i></b>
+<th class="text-center p-4"><b><i>Result</i></b>
+</tr>
+</thead>
+
+<tbody>
+
+<tr th:each="results:${results}">
+
+<td class="text-center p-4" th:text="${results.date}"/>
+<td class="text-center p-4" th:text="${results.Assessment}" />
+<td class="text-center p-4" th:text="${results.Test_Marks}" />
+<td class="text-center p-4" th:text="${results.email}" />
+<td class="text-center p-4" th:text="${results.Total_Marks}" />
+<td class="text-center p-4" th:text="${results.result}" />
+
+</tbody>
+
+
+</table><br><br>
+
+
+<form th:action="@{/admin}">
+<input type="submit" value="Go-Back">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

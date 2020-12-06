@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+<title>Candidate-Page</title>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+</head>
+
+<body style="background-color:#ffcce6">
+<div class="text-center p-4">
+
+<h4><b><i>Select the Test </i></b></h4>
+<br><br>
+
+
+<a th:href="@{/candidate/SpringAssessment}"><h5><b><i>Spring Assessments</i></b></h5></a>
+<br><br>
+
+<a th:href="@{/candidate/HibernateAssessment}"><h5><b><i>Hibernate Assessments</i></b></h5></a>
+
+<br><br>
+
+<form th:action="@{/logout}" method="post">
+<input type="submit" value="LOGOUT">
+
+</form>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>

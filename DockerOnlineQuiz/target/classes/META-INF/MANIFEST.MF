@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: 91908
+Build-Jdk: 13.0.2
+Implementation-Title: OnlineQuiz
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.BED2
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/OnlineQuiz
+Created-By: Maven Integration for Eclipse
+
