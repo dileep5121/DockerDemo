@@ -1,0 +1,111 @@
+Part A
+    
+    1. With minimal possible layers to install Web Services and expose appropriate http port for accessing :
+      
+      
+     1.Created a Java Application and pushed it to Github repositiry from local machine using Git bash
+     2.Started tomcat container in docker 
+     3.Copied the war file into webapps folder of tomcat in docker container
+     4.Build the docker image as :
+     docker build -p 8080:8080 
+     
+     
+     
+     
+     2.Docker Container is not Starting 
+     
+      1.Not enough memory on the device to start container.
+      2.Docker daemon is not working.
+      3.Access issue while starting container
+      4.Container with same name already exist
+      5.Running too many services in the same container.
+
+
+
+  PART B
+  
+    1.Using shell command search for a particular pattern (of your choice) to search Docker logs using awk command
+      Awk command can be used to find a particular pattern in logs.For instance “docker logs test | awk '/add/ {print}'” formats the logs of the container and prints only the lines containing ‘add’. 
+
+
+   2.Execute a shell command inside a container to search for a file
+   
+   Command to searchfor file inside docker container is as follows:
+   
+   1.“docker exec –it <container name> find / -name <filename>”
+   
+   The command "docker exec -it" means to run command inside docker container which is already running without opening terminal
+   "/" implies that find the file from root directory
+   "-name <filename>" is used to specify name of the file to be searched
+   
+   
+   
+   
+   
+   
+   
+   JENKINS
+   
+PART A
+    1. There is a Jenkins pipeline failure the failure error at the outset suggest that build has failed and one of the tool used for the build is running inside the container – what are the commands you will use for debugging the issue
+
+   1. docker stats <container id> --> when we are using any metrics, and they show how the error occured
+        2. docker logs <container id> --> basic command which shows all i/p o/p and errors of a container
+        3. docker exec -it <container_id> /bin/bash --> go inside a container and debug
+        4. docker commit <container_id> my-broken-container && docker run -it my-broken-container /bin/bash --> if we cant really start a container
+        5. docker cp <container_id>:/pathinserver /local-path --> to save the container log locally and debug the issue.
+        
+        
+        
+   2 There is a build failure due to connectivity issue with one of the tools – what actions you will take to narrow down the issue.
+   
+   1.Checking if the credentials are properly configured
+   2.In case of master-slave configuration check whether master and slave are properly configured
+   3.Checing whether the required plugins for the required tools are correctly installed
+   4.Check whether the apis written are properly working.
+   
+   
+   
+   
+  3. Why Docker Push fails?
+  
+  
+  1.Access denied to docker hub
+  2 Authentication issue
+  3.Docker pipeline plugin may not be installed.
+  4.In the Jenkins credentials, credentials might not be added properly
+  5. Wrong tags being provided
+  6.In Jenkins file the stage may not be correct(syntax errors) or the proper credential name not specified
+  
+  
+  
+  
+4.  Write a shell script to setup git repo, docker build, push image to docker repository.
+
+
+  Setting up Git Repo:
+  1.git init 
+  2.git remote add origin "url of github repository"
+  3.git add -A
+  4.git commit -m "give some message"
+  5.git push origin master
+  
+  With the above command first a git repo will be setup in local machine and then the file/project will be pushed to remote repository
+  
+  
+  
+ Docker Build
+ 
+ To build the docker image the steps are:
+ 
+ 1. cd "path to Dockerfile" 
+ 2.docker build -t "image name" .
+ 3.docker run  -p <external port>:<container-port> "image name same as given in step 2"
+ 
+ 
+ Push Image to Docker Repository
+ 
+ 1.docker login
+ 2.docker tag <name of image to be tagged> <dockerHub Username>/<image name>
+ 3.docker push <name of the tagged image to be pushed>
+ 
